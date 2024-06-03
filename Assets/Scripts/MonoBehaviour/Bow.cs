@@ -24,8 +24,8 @@ public class Bow : MonoBehaviour
     {
         projectileNull = projectile == null;
         bowScriptableObjectNull = bow == null;
-        if (projectileNull) { Debug.LogWarning("No projectile prefab specified"); return; }
-        if (bowScriptableObjectNull) { Debug.LogWarning("No scriptable object specified"); return; }
+        if (projectileNull) { Debug.LogWarning("No projectile prefab specified"); }
+        if (bowScriptableObjectNull) { Debug.LogWarning("No scriptable object specified"); }
     }
 
     // Update is called once per frame
