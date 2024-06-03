@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0KJFH+Guf+1ACaZADtGeDHgZSezkph5/JPDqLR82oX12RXbmmkJVq7iLJ5aPy535euOaBSR9yOfKVzA+Op8srw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\love.lysellberglund\\Unity Projects\\LoveLysellBerglundSlutgiltigExamination\\CSharpProjFolders\\Assembly-CSharp\\Assembly-CSharp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\love.lysellberglund\\.nuget\\packages\\microsoft.unity.analyzers\\1.19.0\\microsoft.unity.analyzers.1.19.0.nupkg.sha512"
+  ],
+  "logs": []
+}
