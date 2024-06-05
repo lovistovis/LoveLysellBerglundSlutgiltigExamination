@@ -11,10 +11,16 @@ public class Projectile : MonoBehaviour
     [Header("References")]
     [SerializeField] private ProjectileScriptableObject projectile;
 
-    // Static references
-
     // Private variables
     private bool projectileScriptableObjectNull;
+    private LayerMask hitLayerMask;
+
+    // Properties
+    public LayerMask HitLayerMask
+    {
+        get { return hitLayerMask; }
+        set { hitLayerMask = value; }
+    }
 
     // Start is called before the first frame update
     void Start()

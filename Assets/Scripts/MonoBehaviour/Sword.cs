@@ -61,11 +61,8 @@ public class Sword : MonoBehaviour
         if (!collidingObjects.Contains(otherGameObject))
         {
             collidingObjects.Add(otherGameObject);
-            Debug.Log(attacking);
             if (!cooldownActive) { return; }
-            Debug.Log("hello2");
             if (!otherGameObject.TryGetComponent(out IDamageable damageable)) { return; }
-            Debug.Log("hello3");
             float damage = sword.damage * combo[comboState].damageMultiplier;
             damageable.Damage(damage);
         }

@@ -19,6 +19,9 @@ namespace ExtensionMethods
             return vector;
         }
 
+        /// <summary>
+        /// Lerp from current value to target in duration seconds.
+        /// </summary>
         public static IEnumerator LerpOverTime(this Vector3 vector, Action<Vector3> setter, Vector3 target, float duration, bool ignoreTimeScale = false)
         {
             Vector3 startPosition = vector;
@@ -27,10 +30,11 @@ namespace ExtensionMethods
             float progress;
             while (elapsed <= duration)
             {
+                yield return null;
                 elapsed = (ignoreTimeScale ? Time.unscaledTime : Time.time) - start;
                 progress = elapsed / duration;
+                if (float.IsNaN(progress) || float.IsInfinity(progress)) { continue; }  // idk
                 setter(Vector3.Lerp(startPosition, target, progress));
-                yield return null;
             }
             setter(target);
         }
